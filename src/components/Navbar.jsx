@@ -11,9 +11,9 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-md p-3">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <i className="bi bi-hourglass-split">Time Tracking</i>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,8 +28,8 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-lg-0">
               <li className="nav-item">
-                <Link to="/" className="nav-link " aria-current="page">
-                  <span className="nav-link-text"> Home</span>
+                <Link to="/addProject" className="nav-link " aria-current="page">
+                  <span className="nav-link-text">Add Project</span>
                 </Link>
               </li>
               {isLoggedIn ? (

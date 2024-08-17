@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Register from './components/Register.jsx'
 import Login from './components/Login.jsx'
 import Home from './components/Home.jsx'
+import AddProject from './components/AddProject.jsx'
 
 
 const router=createBrowserRouter([
@@ -23,6 +24,10 @@ const router=createBrowserRouter([
       },{
         path:'/login',
         element:<Login />
+      },
+      {
+        path:'/addProject',
+        element:<AddProject />
       }
     ]
   }

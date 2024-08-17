@@ -58,6 +58,20 @@ const UserCotextProvider = ({ children }) => {
     setUser("");
   };
 
+
+  const addProject=async (project)=>{
+    try {
+      const response=await axios.post(`${BASE_URL}/addProject`,project);
+
+      alert(response.data.message);
+      
+
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
   return (
     <ContextApi.Provider
       value={{
@@ -66,6 +80,7 @@ const UserCotextProvider = ({ children }) => {
         register,
         login,
         logout,
+        addProject,
       }}
     >
       {children}
